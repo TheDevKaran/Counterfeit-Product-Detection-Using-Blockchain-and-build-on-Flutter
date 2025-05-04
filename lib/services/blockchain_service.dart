@@ -28,14 +28,14 @@ class BlockchainService {
 
   Future<void> initialize() async {
     // Initialize HTTP client for Web3
-    _rpcUrl = 'https://eth-sepolia.g.alchemy.com/v2/qie9yujDZTGeyZQBYyx1ZTaJR20H6QJ6'; // Default Ganache URL, replace with your RPC URL
+    _rpcUrl = ''; // Default Ganache URL, replace with your RPC URL
     _client = Web3Client(_rpcUrl, http.Client());
 
     // Set contract address
-    _contractAddress = EthereumAddress.fromHex('0xEd02A30E8781205195ee3fD909d83e62ECee35Bd'); // Replace with your contract address
+    _contractAddress = EthereumAddress.fromHex(''); // Replace with your contract address
 
     // Set credentials from private key
-    _credentials = EthPrivateKey.fromHex('3278f0dafd9e16450a31fefe9a9f9b49d845e81675d43a4461e8e0ac08ae5115'); // Replace with your private key
+    _credentials = EthPrivateKey.fromHex(''); // Replace with your private key
 
     // Load contract ABI
     String abiContent = await rootBundle.loadString('assets/Company.json');
